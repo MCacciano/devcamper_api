@@ -19,6 +19,9 @@ const users = require('./routes/users');
 
 const app = express();
 
+// body parser
+app.use(express.json());
+
 // dev logging
 if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
 
